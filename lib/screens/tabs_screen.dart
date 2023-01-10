@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meals_app/screens/categories_screen.dart';
 import 'package:meals_app/screens/favorites_screen.dart';
+import 'package:meals_app/widget/main_drawer.dart';
 
 class TabScreen extends StatefulWidget {
   const TabScreen({super.key});
@@ -44,6 +45,7 @@ class _TabScreenState extends State<TabScreen> {
           // title: Text('Meals'),
           title: Text(_pages[_selectedPageIndex]['title']),
         ),
+        drawer: MainDrawer(),
         
         body: _pages[_selectedPageIndex]['page'],
         // body: _pages[_selectedPageIndex],
